@@ -21,8 +21,8 @@ chmod +x /usr/bin/ws-port
 clear
 echo seleccione puertos
 sleep 1
-read -p "Puerto Dropbear : " openssh
-read -p "Puerto WEBPRO : " wsopenssh
+read -p "Puerto local : " openssh
+read -p "Puerto phyton : " wsopenssh
 WS_DIR=/usr/local/etc/ws-epro
 if [ -d "$WS_DIR" ]; then # if it exists,delete it.
     rm -rf "$WS_DIR"
