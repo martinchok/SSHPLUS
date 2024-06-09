@@ -49,7 +49,7 @@ fun_menu() {
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WEP TODO BIEN  BOT SSHPLUS</b>\n"
+        env_msg+="<b>HOLA  BOT SSHPLUS</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>SELECIONE UNA OPCION ABAJO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -74,7 +74,7 @@ fun_ajuda() {
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WEB TODO BIEN(a)  BOT SSHPLUS</b>\n"
+        env_msg+="<b>HOLA(a)  BOT SSHPLUS</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
         env_msg+="[<b>01</b>] /menu = VER menu\n"
@@ -139,11 +139,11 @@ fun_ajuda() {
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         env_msg+="<b>INICIAMOS EL BOT SSHPLUS</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
+        env_msg+="⚠️ <i>Comandos Disponible</i>\n\n"
         env_msg+="[<b>01</b>] /menu = VER menu\n"
         env_msg+="[<b>02</b>] /info = VER informacion\n"
-        env_msg+="[<b>03</b>] /ajuda = Informacoes sobre opcoes\n\n"
-        env_msg+="⚠️ <i>Opções Disponiveis</i>\n\n"
+        env_msg+="[<b>03</b>] /ajuda = Informacion sobre opciones\n\n"
+        env_msg+="⚠️ <i>Opcion Disponibles</i>\n\n"
         env_msg+="• <u>CREAR USUARIO</u> = Crea usuario ssh\n\n"
         env_msg+="• <u>CREAR DEMO</u> = Crea demo ssh\n\n"
         env_msg+="• <u>REMOVER</u> = Remove usuario ssh\n\n"
@@ -191,7 +191,7 @@ fun_adduser() {
     }
 }
 
-criar_user() {
+crear_user() {
     IP=$(cat /etc/IP)
     newclient() {
         cp /etc/openvpn/client-common.txt ~/$1.ovpn
