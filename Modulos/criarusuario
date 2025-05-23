@@ -345,7 +345,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 		echo -e "\033[1;32mUsuário: \033[1;37m$username"
 		echo -e "\033[1;32mSenha: \033[1;37m$password"
 		echo -e "\033[1;32mExpira em: \033[1;37m$gui"
-		echo -e "\033[1;32mLimite de conexões: \033[1;37m$sshlimiter"
+		echo -e "\033[1;32mLimite de conexiones: \033[1;37m$sshlimiter"
 		sleep 1
 		function aguarde() {
 			helice() {
@@ -386,7 +386,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 		echo -e "\033[1;32mSenha: \033[1;37m$password"
 		echo -e "\n   $IP:1-65535@$username:$password "
 		echo -e "\033[1;32mExpira em: \033[1;37m$gui"
-		echo -e "\033[1;32mLimite de coneciones: \033[1;37m$sshlimiter"
+		echo -e "\033[1;32mLimite de conexiones: \033[1;37m$sshlimiter"
 	}
 } || {
 	clear
@@ -394,6 +394,7 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 	echo -e "\n   Expira el: $gui Limite: $sshlimiter"
 	echo -e "\n   USER WS 👇🏻🚀 "
 	echo -e "\n   host:80@$username:$password "
-    echo -e "\n    USER UDP 👇🏻🚀"
+    
+echo -e "\n    USER UDP 👇🏻🚀"
     echo -e "\n   IP:1-65535@$username:$password "
 }
