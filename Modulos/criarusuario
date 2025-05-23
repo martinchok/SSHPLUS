@@ -391,11 +391,11 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 } || {
 	clear
 	echo -e "\E[44;1;37m   CUENTA VPS CREADA👤 !      \E[0m"
-	echo -e "\n   Expira en: $gui Limite: $sshlimiter"
+	echo -e "\n   Expira el: $gui Limite: $sshlimiter"
 	echo -e "\n   USER WS 👇🏻🚀 "
 	echo -e "\n   host:80@$username:$password "
     echo -e "\n   IP:1-36712@$username:$password "
-    echo -e "\n   USUARIO UDP 👇🏻🚀"
+    echo -e "\n   USER UDP 👇🏻🚀"
     echo -e "\n   IP:1-65535@$username:$password "
-    echo -e "\n   USER WS 👇🏻🚀 "
+    echo -e "\n
 }
