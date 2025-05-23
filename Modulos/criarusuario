@@ -394,8 +394,6 @@ echo "$username $sshlimiter" >>/root/usuarios.db
 	echo -e "\n   Expira el: $gui Limite: $sshlimiter"
 	echo -e "\n   USER WS 👇🏻🚀 "
 	echo -e "\n   host:80@$username:$password "
-    echo -e "\n
-    echo -e "\n   USER UDP 👇🏻🚀"
-    echo -e "\n   IP:1-65535@$username:$password "
-    echo -e "\n
+    echo -e "\n USER UDP 👇🏻🚀"
+    echo -e "\n IP:1-65535@$username:$password "
 }
