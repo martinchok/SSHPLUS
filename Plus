@@ -42,10 +42,10 @@ clear; exit 1
 }
 }
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
-tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "BIEN VENIDO A SSHPLUS MANAGER" ; tput sgr0
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "BIENVENIDO A MARTINVPN" ; tput sgr0
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
 echo ""
-echo -e "             \033[1;31mATENCAO! \033[1;33mESTE SCRIPT IRA !\033[0m"
+echo -e "             \033[1;31mATENCION! \033[1;33mESTE SCRIPT IRA !\033[0m"
 echo ""
 echo -e "\033[1;31m• \033[1;33mINSTALAR UN CONJUNTO DE SCRIPTS COMO HERRAMIENTAS\033[0m"
 echo -e "\033[1;33m  PARA EL GERENCIAMENTO DE REDES, SISTEMA Y USUARIOS\033[0m"
@@ -121,7 +121,7 @@ clear
 echo ""
 echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALANDO PAQUETES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
 echo ""
-echo -e "\033[1;33mALGUNOS PAQUETES SON EXTREMAMENTE  NECESSARIOS !\033[0m"
+echo -e "\033[1;33mALGUNOS PAQUETES SON EXTREMAMENTE  NECESARIOS !\033[0m"
 echo ""
 inst_pct () {
 _pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
