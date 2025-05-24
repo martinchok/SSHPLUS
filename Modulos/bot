@@ -33,13 +33,13 @@ fun_menu() {
     }
     [[ -d /etc/bot/suspensos/${message_from_username} ]] && {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "🚫 USTED ESTA SUSPENDIDO 🚫\n\nCONTACTE COM ADMINISTRADOR")"
+            --text "$(echo -e "🚫 USTED ESTA SUSPENDIDO 🚫\n\nCONTACTE CON ADMINISTRADOR")"
         return 0
     }
     if [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'revenda')" != '0' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WEP INICIAMOS EL BOT SSHPLUS</b>\n"
+        env_msg+="<b>INICIAMOS EL BOT Martin VPN</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>SELECIONE UNA OPCION ABAJO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -49,7 +49,7 @@ fun_menu() {
     elif [[ "$(grep -w "${message_from_username}" $ativos | grep -wc 'subrevenda')" != '0' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>HOLA  BOT SSHPLUS</b>\n"
+        env_msg+="<b>HOLA  BOT MartinVPN</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>SELECIONE UNA OPCION ABAJO !</i>\n\n"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} --text "$env_msg" \
@@ -74,14 +74,14 @@ fun_ajuda() {
     if [[ "$id_chatuser" = "$id_admin" ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>HOLA(a)  BOT SSHPLUS</b>\n"
+        env_msg+="<b>HOLA(a)  BOT Martin VPN</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
-        env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
+        env_msg+="⚠️ <i>Comandos Disponibles</i>\n\n"
         env_msg+="[<b>01</b>] /menu = VER menu\n"
         env_msg+="[<b>02</b>] /info = VER informacion\n"
         env_msg+="[<b>03</b>] /ajuda = Informacoes sobre opcoes\n\n"
         env_msg+="⚠️ <i>OPCIONES DISPONIBLES</i>\n\n"
-       env_msg+="• <u>COMPRAR DROPLET 🇦🇷😎👉🏻</u> =  @diegovip7 \n\n"
+       env_msg+="• <u>COMPRAR DROPLET 🇦🇷😎👉🏻</u> =  @martincho95 \n\n"
         env_msg+="• <u>CREAR USUARIO</u> = Crear usuario ssh\n\n"
         env_msg+="• <u>CREAR DEMO</u> = Crear demo ssh\n\n"
         env_msg+="• <u>REMOVER</u> = Remove usuario ssh\n\n"
@@ -106,12 +106,12 @@ fun_ajuda() {
         return 0
     elif [[ -d /etc/bot/suspensos/$id_name ]]; then
         ShellBot.sendMessage --chat_id $id_chatuser \
-            --text "$(echo -e "🚫 WEP ESTAS SUSPENDIDO 🚫\n\nCONTACTE CON ADMINISTRADOR")"
+            --text "$(echo -e "🚫 ESTAS SUSPENDIDO 🚫\n\nCONTACTE CON ADMINISTRADOR")"
         return 0
     elif [[ "$(grep -w "$id_name" $ativos | awk '{print $NF}')" == 'revenda' ]]; then
         local env_msg
         env_msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
-        env_msg+="<b>WEP 🇦🇷  BOT SSHPLUS</b>\n"
+        env_msg+="<b>  🇦🇷  BOT Martin VPN</b>\n"
         env_msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
         env_msg+="[<b>01</b>] /menu = VER menu\n"
@@ -177,7 +177,7 @@ verifica_acesso() {
 fun_adduser() {
     [[ "$(grep -wc ${callback_query_from_username} $suspensos)" != '0' ]] && {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-            --text "⚠️ WEP ESTA SUSPENDIDO! CONTATE O ADMINISTRADOR"
+            --text "⚠️ ESTA SUSPENDIDO! CONTATE O ADMINISTRADOR"
         return 0
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
@@ -242,7 +242,7 @@ crear_user() {
 fun_deluser() {
     [[ "$(grep -wc ${callback_query_from_username} $suspensos)" != '0' ]] && {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-            --text "⚠️ WEP ESTAS SUSPENDIDO! CONTACTE CON ADMINISTRADOR"
+            --text "⚠️  ESTAS SUSPENDIDO! CONTACTE CON ADMINISTRADOR"
         return 0
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
@@ -301,7 +301,7 @@ fun_del_user() {
 alterar_senha() {
     [[ "$(grep -wc ${callback_query_from_username} $suspensos)" != '0' ]] && {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-            --text "⚠️ WEP ESTA SUSPENDIDO! CONTATE O ADMINISTRADOR"
+            --text "⚠️ ESTA SUSPENDIDO! CONTATE O ADMINISTRADOR"
         return 0
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
@@ -331,7 +331,7 @@ alterar_senha_user() {
 alterar_limite() {
     [[ "$(grep -wc ${callback_query_from_username} $suspensos)" != '0' ]] && {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-            --text "⚠️ WEP ESTAS SUSPENDIDO! CONTACTE CON ADMINISTRADOR"
+            --text "⚠️ ESTAS SUSPENDIDO! CONTACTE CON ADMINISTRADOR"
         return 0
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
@@ -395,7 +395,7 @@ alterar_limite_user() {
 alterar_data() {
     [[ "$(grep -wc ${callback_query_from_username} $suspensos)" != '0' ]] && {
         ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-            --text "⚠️ WEP ESTA SUSPENDIDO! CONTATE O ADMINISTRADOR"
+            --text "⚠️ ESTA SUSPENDIDO! CONTATE O ADMINISTRADOR"
         return 0
     }
     [[ "${callback_query_from_id[$id]}" == "$id_admin" ]] || [[ "$(grep -wc ${callback_query_from_username} $ativos)" != '0' ]] && {
@@ -485,7 +485,7 @@ ver_users() {
     elif [[ "$(grep -wc "${callback_query_from_username}" $ativos)" != '0' ]]; then
         [[ "$(grep -wc ${callback_query_from_username} $suspensos)" != '0' ]] && {
             ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-                --text "⚠️ WEP ESTA SUSPENDIDO! CONTACTE CON ADMINISTRADOR"
+                --text "⚠️ ESTA SUSPENDIDO! CONTACTE CON ADMINISTRADOR"
             return 0
         }
         [[ $(ls /etc/bot/revenda/${callback_query_from_username}/usuarios | wc -l) == '0' ]] && {
