@@ -1,4 +1,4 @@
-﻿#!/bin/bash
+#!/bin/bash
 clear
 slowdns () {
 echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
@@ -40,7 +40,7 @@ echo -e "\033[0;36m#===================================================#\033[m"
     9) Opcao9 ;;
     10) Opcao10 ;;
     11) Opcao11 ;;
-    0) Sair ;;
+    0) Salir ;;
     *) "Calma Barboleta" ; echo ; slowdns ;;
     esac
     }
@@ -107,7 +107,7 @@ Opcao11 () {
     rm /bin/slowdns
 }
 
-Sair() {
+Salir() {
     clear
     exit
 }
